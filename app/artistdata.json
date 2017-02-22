@@ -1,32 +1,4 @@
-import { Component } from '@angular/core';
-import { ArtistItemComponent } from './component.artist-item';
-
-export class Artist{
-  name: string;
-  shortname: string;
-  reknown: string;
-  bio: string;
-}
-
-@Component({
-  selector: 'app',
-  templateUrl: './partials/app.html',
-  styleUrls: ["./css/apps.css"]
-})
-
-export class AppComponent {
-  artists = ARTISTS;
-  // currentArtist = Artist; // Error: show detail before click
-  currentArtist = undefined;
-
-  showArtist(item){
-    console.log(this.currentArtist);
-    this.currentArtist = item;
-  };
-
-} // class: AppComponent
-
-var ARTISTS: Artist[] = [
+[
   {
     "name":"Barot Bellingham",
     "shortname":"Barot_Bellingham",
@@ -73,4 +45,4 @@ var ARTISTS: Artist[] = [
     "reknown":"China International Art University",
     "bio":"A senior at the China International Art University, Xhou has become well-known for his miniature sculptures, often the size of a rice granule, that are displayed by rear projection of microscope images on canvas. Xhou will discuss the art and science behind his incredibly detailed works of art."
   }
-];
+]
