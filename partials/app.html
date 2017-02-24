@@ -4,8 +4,8 @@
     <span *ngIf="query"
       [innerHTML] = "'for: ' + query"></span></label>
     <input type="text" class="search-input"
-      (keyup) = "currentArtist = ''"
       [(ngModel)] = "query" placeholder="Type in search term there">
+      <!-- (keyup) = "currentArtist = ''" -->
     <!-- <button class="btn"
       (click) = "addArtist(newArtist.value, $event)" newArtist.value="">
       ADD</button> -->
@@ -15,7 +15,7 @@
   *ngIf="query">
   <li class="artistlist-item cf"
     (click) = "showArtist(item); query = '';"
-    *ngFor="let item of artists">
+    *ngFor="let item of (artists | search: query)">
     <artist-item class="content" [artist]=item></artist-item>
   </li>
 </ul>
