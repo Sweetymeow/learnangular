@@ -1,0 +1,101 @@
+order,label,Last Name,Collect Date,Loc_Lat,Loc_Lon,Institution Type,Institution,Department,Job Title,Industry,Tech,radius,distance,distanceall
+10,Talon,Adkins,1/3/18,11.40052,99.46917,Corporation,Lobortis Risus In Corporation,Human Resources,Developer,Telecommunication,VR/AR,1,8,6193.94
+11,Nerea,Fuller,1/29/18,-84.99653,50.95753,Others,Bibendum PC,Legal Department,Designer,Higher Ed & Research,VR/AR,1,4,1403.51
+12,Amaya,Acosta,7/10/17,0.06568,-116.20284,Corporation,Posuere At Foundation,Media Relations,Other,Media,VR/AR,1,7,2987.39
+15,Reed,Irwin,6/30/17,12.16039,3.77746,Others,Curabitur Ut Odio Consulting,Tech Support,Manager,Life Sciences,Machine Learning,1,3,2912.69
+18,Carissa,Phillips,7/11/17,89.40299,-149.53689,Others,Lacinia Orci Consectetuer Incorporated,Legal Department,Product Manager,High Tech,IOT,1,6,3119.73
+21,Tanisha,Bray,5/9/17,-80.3502,-157.74318,Startup,Lacus Consulting,Finances,Product Manager,Mahine Learning,IOT,1,4,210.10
+24,Moses,Vincent,9/3/17,68.76857,-0.6939,University,Ornare Libero Incorporated,Public Relations,Other,Professional Services,IOT,1,5,680.59
+34,Imelda,Hendrix,1/27/18,29.80547,-174.89472,University,Tincidunt Nibh Limited,Customer Relations,Developer,Retail,Others,1,1,631.80
+37,August,Boyd,7/19/17,-85.80336,81.55829,Corporation,Proin Non Massa Consulting,Asset Management,Designer,CIOs,Others,1,7,4404.27
+38,Juliet,Owen,8/25/17,15.20619,100.36745,University,Ultricies Adipiscing Inc.,Accounting,Manager,Public Sector,IOT,1,5,1187.12
+45,Mary,Chavez,7/27/17,63.31102,142.79962,University,Laoreet Incorporated,Customer Relations,Developer,Industrial Machinery & Components,IOT,1,8,2377.34
+47,Seth,Golden,4/29/17,-57.18105,179.65572,Startup,Metus In Nec Foundation,Accounting,Designer,Higher Ed & Research,IOT,1,3,126.73
+48,Ivy,Larsen,11/2/17,79.48274,-4.19754,Others,Integer Vitae Nibh LLP,Media Relations,Other,Industrial Machinery & Components,Others,1,7,2232.95
+49,Edan,Griffith,9/12/17,14.78578,154.64947,University,Purus Sapien Industries,Finances,Product Manager,Telecommunication,VR/AR,1,3,1792.56
+56,Cara,Malone,5/14/17,22.34955,-168.76728,Others,Euismod In Limited,Research and Development,Other,Sports,Others,1,4,3801.40
+57,Kyle,Gardner,11/13/17,-11.4846,81.42808,Others,In Faucibus Consulting,Finances,Developer,Public Sector,IOT,1,1,401.06
+58,Chadwick,Gutierrez,1/9/18,-73.46012,-131.1019,University,Consectetuer Adipiscing Limited,Public Relations,Designer,Chemicals,Others,1,8,7578.52
+59,Asher,Rasmussen,1/21/18,-72.7138,-56.01768,Corporation,Et Magnis Ltd,Media Relations,Other,Mill Products,IOT,1,1,512.32
+61,Devin,Garrett,1/2/18,-19.17207,95.46906,University,Sed Dictum LLC,Human Resources,Other,Life Sciences,IOT,1,4,921.77
+74,Mira,Long,11/18/17,50.39863,161.45268,Startup,Risus Consulting,Tech Support,Developer,Mahine Learning,VR/AR,1,6,1111.04
+80,Hollee,Pratt,1/18/18,-74.90131,-57.65262,Corporation,Tellus Ltd,Media Relations,Manager,WOMEN,IOT,1,2,254.18
+86,Violet,Terrell,7/12/17,30.39503,-6.86788,Startup,Mauris Eu Elit Institute,Sales and Marketing,Designer,Insurance,VR/AR,1,5,4413.92
+88,Eugenia,Cortez,6/12/17,14.19265,78.58191,Others,Etiam Industries,Legal Department,Manager,Mill Products,Machine Learning,1,3,1659.54
+92,Tallulah,Barnes,1/25/18,-13.61362,100.43451,University,Egestas Sed Pharetra Consulting,Accounting,Product Manager,Consumer Products,IOT,1,5,2685.17
+99,Angelica,Harper,12/30/17,43.6833,133.9582,Others,Laoreet Lectus Limited,Advertising,Product Manager,Engineering Construction & Operations,IOT,1,1,542.16
+100,Ali,Andrews,9/26/17,-1.83793,-152.50226,Corporation,Quis Lectus Nullam Associates,Customer Service,Developer,Telecommunication,Others,1,7,962.45
+3,Jonas,Steele,11/26/17,-82.54663,-87.10177,Corporation,Aliquet Diam Sed LLP,Quality Assurance,Other,Public Sector,IOT,2,7,4709.46
+7,Noelle,Cotton,5/27/17,20.10216,63.86427,Startup,Augue Ltd,Legal Department,Designer,Consumer Products,IOT,2,4,3406.38
+14,Zorita,Stanton,5/19/17,88.03205,104.275,University,Ipsum Suspendisse Foundation,Research and Development,Product Manager,HR,Machine Learning,2,5,2626.53
+23,August,Hughes,8/20/17,22.37867,-68.11337,University,Morbi Metus Vivamus Company,Advertising,Designer,Robotics,Machine Learning,2,4,511.64
+25,Noble,Nash,1/25/18,64.45758,25.75162,University,Urna Nunc Company,Human Resources,Manager,High Tech,IOT,2,8,1886.29
+27,Nina,Carpenter,6/15/17,-9.94497,136.41385,Corporation,Gravida Sit Amet Incorporated,Legal Department,Designer,Healthcare,Machine Learning,2,6,5909.88
+28,Paul,Gates,8/27/17,20.80433,-129.61431,Startup,Eu Institute,Advertising,Manager,Entertainment,Machine Learning,2,6,5912.69
+29,Flynn,Aguilar,6/11/17,42.66884,-115.54915,Others,Turpis PC,Research and Development,Manager,Chemicals,Others,2,10,7722.00
+31,Beck,Maxwell,4/25/17,80.44808,173.49834,Corporation,Non Leo PC,Advertising,Other,Insurance,VR/AR,2,7,1089.89
+32,Imelda,Hammond,6/5/17,57.58788,147.30898,Others,Eget Incorporated,Finances,Manager,Oil & Gas,IOT,2,3,2443.27
+33,Doris,Mercer,5/16/17,64.86431,154.83594,Others,Aenean Incorporated,Finances,Product Manager,Telecommunication,Others,2,8,3542.91
+35,Patrick,Ellison,4/24/17,55.6342,-39.45771,Corporation,Porttitor Inc.,Public Relations,Product Manager,Insurance,Machine Learning,2,2,1153.62
+36,Shad,Duke,10/28/17,7.57277,119.25696,Startup,Netus Et Industries,Asset Management,Product Manager,Oil & Gas,Others,2,5,148.97
+39,Daquan,Hunt,7/8/17,38.99399,80.08268,Corporation,Curabitur Ltd,Advertising,Designer,Life Sciences,VR/AR,2,6,3639.28
+41,Priscilla,Duran,7/20/17,0.53906,127.66721,Corporation,Mi Company,Public Relations,Product Manager,Purpose Driven Innovation,IOT,2,7,4824.45
+42,Marny,Landry,11/4/17,47.86716,-97.10255,Startup,Penatibus Et Ltd,Sales and Marketing,Developer,CIOs,IOT,2,7,936.05
+44,India,Morales,5/15/17,-78.65159,-51.58238,Others,Ante Associates,Human Resources,Manager,Aerospace,IOT,2,3,1507.97
+46,Lacota,Manning,10/29/17,-31.19631,-107.09621,University,Elit Institute,Human Resources,Manager,Aerospace,VR/AR,2,9,8703.47
+51,Rajah,Simpson,5/27/17,49.37165,-130.92662,University,Mus Donec Dignissim LLP,Sales and Marketing,Other,Aerospace,Others,2,9,5369.99
+52,Freya,Gross,12/14/17,-62.689,114.37275,Corporation,Felis Donec Tempor LLP,Payroll,Product Manager,CIOs,VR/AR,2,1,626.34
+53,Conan,Pratt,10/9/17,-85.24222,-176.88554,Others,Ante Bibendum Incorporated,Sales and Marketing,Designer,Mahine Learning,VR/AR,2,7,6260.87
+55,Hyacinth,Ford,7/14/17,-81.6289,28.43863,Others,Aliquet Nec Imperdiet Company,Payroll,Designer,CIOs,Machine Learning,2,1,181.60
+63,Tasha,Johnson,1/24/18,84.74837,27.7406,Startup,Eu Associates,Research and Development,Developer,CIOs,VR/AR,2,2,406.00
+65,Jerry,Burks,5/12/17,66.01836,31.03854,University,Vitae Purus Gravida Corp.,Payroll,Product Manager,Mining,IOT,2,8,7540.22
+66,Winifred,Humphrey,10/9/17,-1.16392,179.40644,Corporation,Morbi Metus Vivamus Company,Sales and Marketing,Manager,Life Sciences,Others,2,9,6482.10
+67,Marny,Lancaster,9/8/17,86.62899,20.46842,University,Curabitur LLC,Advertising,Designer,Professional Services,Machine Learning,2,2,125.56
+70,Keiko,Garcia,6/7/17,52.27649,104.26923,University,Sed Hendrerit A Limited,Sales and Marketing,Designer,Banking,Others,2,7,2097.66
+71,Jonah,Walls,8/21/17,60.47832,-73.75402,Others,Id Ante LLP,Public Relations,Developer,Insurance,Others,2,3,957.71
+72,Audrey,Burks,4/23/17,73.77654,-144.77852,University,Dui Fusce Limited,Finances,Developer,Internet of Things,Machine Learning,2,6,5478.92
+73,Quinn,Thornton,5/16/17,78.28545,-170.133,Others,Phasellus LLC,Public Relations,Manager,Sports,IOT,2,9,112.85
+76,Cheryl,Mathis,8/16/17,-35.61533,-58.31131,University,In Dolor Inc.,Media Relations,Designer,Engineering Construction & Operations,Others,2,10,2553.81
+78,Alexander,Meadows,7/20/17,9.2561,145.374,Startup,Tellus Incorporated,Human Resources,Product Manager,Consumer Products,Others,2,4,1615.60
+79,Candace,Pugh,5/25/17,-61.6049,106.90715,Corporation,Ornare Lectus Justo Corporation,Finances,Other,Mahine Learning,IOT,2,7,1277.23
+82,Dylan,Valencia,11/2/17,46.00574,-117.32447,Others,Phasellus LLP,Research and Development,Product Manager,Healthcare,IOT,2,7,6804.55
+83,Sacha,Richmond,6/11/17,65.4847,131.92801,Others,Phasellus Inc.,Media Relations,Other,Wholesale,Others,2,6,3504.64
+90,Raya,Bowman,9/11/17,-14.39112,-146.04804,University,A Industries,Finances,Other,Engineering Construction & Operations,Machine Learning,2,9,3145.11
+95,Yvette,Daniel,6/19/17,39.63241,-70.17453,Corporation,Integer Aliquam Adipiscing Company,Sales and Marketing,Designer,Virtual Reality,Others,2,8,3226.85
+97,Halee,Stephenson,6/12/17,45.35018,-148.69585,University,Nisl Corporation,Advertising,Manager,Consumer Products,IOT,2,3,909.83
+98,Karyn,Osborne,9/28/17,79.76011,168.59335,Others,Egestas Lacinia Inc.,Media Relations,Other,Insurance,IOT,2,1,300.85
+1,Morgan,Sweeney,9/29/17,36.38327,116.94306,Startup,Sagittis Inc.,Customer Service,Manager,Life Sciences,Others,3,7,276.13
+2,Elizabeth,Morris,11/19/17,-10.21537,-162.8151,University,Tellus Lorem Foundation,Media Relations,Other,Telecommunication,VR/AR,3,3,121.07
+4,Denton,Foreman,7/27/17,38.85112,-23.33039,Others,Velit Dui Semper Ltd,Media Relations,Designer,Mahine Learning,VR/AR,3,2,715.86
+5,Jena,Booth,5/21/17,42.33117,1.63947,Corporation,Imperdiet Ornare In LLP,Tech Support,Product Manager,Blockchain,Machine Learning,3,3,2022.82
+6,Beau,Farley,5/31/17,54.66065,-83.13476,Startup,Quis Urna Nunc LLC,Human Resources,Manager,Chemicals,VR/AR,3,6,4556.15
+8,Angela,Perez,11/16/17,25.15417,141.12407,Startup,Feugiat Institute,Customer Service,Designer,Insurance,Machine Learning,3,9,4749.54
+9,Iola,Carr,5/4/17,22.59074,-48.25222,University,Egestas Nunc Consulting,Customer Service,Developer,Consumer Products,Others,3,3,276.83
+13,Grant,Franks,6/10/17,86.41747,97.80704,Corporation,Nam Nulla Magna Ltd,Customer Relations,Developer,Life Sciences,VR/AR,3,9,1824.64
+16,Connor,Armstrong,9/24/17,-36.5456,-38.6009,Corporation,Consectetuer Euismod Est Institute,Sales and Marketing,Product Manager,Industrial Machinery & Components,VR/AR,3,10,4318.05
+17,Karleigh,Green,11/6/17,-25.11442,171.70598,Corporation,Ut Pellentesque Consulting,Human Resources,Designer,Mining,Machine Learning,3,4,1754.90
+19,Autumn,Golden,10/28/17,-29.66546,-28.16941,Corporation,Convallis Associates,Asset Management,Product Manager,Automotive,VR/AR,3,5,1861.51
+20,Rhea,Reynolds,11/21/17,46.54311,64.44134,University,Dictum Inc.,Research and Development,Designer,Sports,IOT,3,2,1012.37
+22,Ariel,Kelley,1/15/18,-17.9404,-33.40799,Others,Mi Lacinia Corporation,Sales and Marketing,Manager,Purpose Driven Innovation,Machine Learning,3,2,827.71
+26,Wynne,Castaneda,12/18/17,-7.85259,-48.54231,Startup,In Inc.,Customer Service,Manager,Engineering Construction & Operations,Machine Learning,3,7,2494.14
+30,Phillip,Merritt,10/26/17,-68.09178,140.54715,Corporation,Amet Ltd,Payroll,Other,Higher Ed & Research,Machine Learning,3,7,1530.03
+40,Burton,Foreman,8/16/17,89.53871,12.46762,Others,Dapibus Corporation,Media Relations,Designer,Defense and Security,VR/AR,3,7,83.88
+43,Regan,Hubbard,9/4/17,-81.85311,-162.9544,University,Amet Incorporated,Human Resources,Other,Banking,Machine Learning,3,2,1000.90
+50,Cole,Blair,1/23/18,34.45398,-90.25132,Startup,Ut Molestie In Industries,Finances,Developer,Consumer Products,Machine Learning,3,10,8636.34
+54,Sigourney,Ramos,7/18/17,-17.88641,-68.15731,Startup,Lacinia Mattis Integer Incorporated,Accounting,Manager,Oil & Gas,IOT,3,2,1747.60
+60,Alana,Finch,5/4/17,60.29833,77.89368,Others,Non Vestibulum Nec LLC,Sales and Marketing,Designer,Consumer Products,Others,3,7,1890.49
+62,Isabelle,Boone,12/7/17,-19.20535,107.73938,Startup,Quis Urna Company,Tech Support,Developer,Mining,Machine Learning,3,1,220.02
+64,Rhoda,Vega,12/28/17,69.39015,50.67483,Corporation,Consequat Inc.,Customer Relations,Designer,Healthcare,VR/AR,3,3,498.72
+68,Murphy,Tucker,8/9/17,52.63424,-108.04541,Others,Tincidunt Aliquam Arcu Foundation,Quality Assurance,Designer,Aerospace,IOT,3,1,581.05
+69,Whitney,Hutchinson,8/3/17,11.74055,44.2062,Others,Sed Sapien Nunc LLP,Customer Service,Designer,Industrial Machinery & Components,Others,3,3,495.50
+75,Maggy,Wolf,10/16/17,53.58345,47.53941,Startup,Orci Sem Eget Foundation,Quality Assurance,Other,Internet of Things,Machine Learning,3,2,558.75
+77,Dean,Knapp,5/23/17,53.31154,105.40475,Others,Proin Sed Foundation,Accounting,Other,Banking,IOT,3,6,1979.93
+81,Athena,Wagner,8/14/17,-46.82225,4.76543,Corporation,Mauris Company,Tech Support,Manager,CIOs,Others,3,7,1330.85
+84,Aimee,Crane,5/3/17,-68.95733,107.74405,Others,Convallis Est Vitae LLP,Asset Management,Product Manager,Utilities,IOT,3,2,1765.27
+85,Maxwell,Roberson,7/8/17,-47.75307,37.40901,Startup,Mus Associates,Tech Support,Developer,HR,VR/AR,3,2,78.76
+87,Hilary,Sweet,9/13/17,70.99839,-81.25071,Corporation,Ipsum Suspendisse Sagittis LLP,Customer Service,Designer,CIOs,Others,3,6,2056.04
+89,Blaine,Mann,12/27/17,50.93179,-174.7552,University,A Odio Ltd,Payroll,Other,Utilities,IOT,3,1,906.20
+91,Meredith,Lewis,1/27/18,5.2076,25.56231,University,Eleifend Nec Malesuada Limited,Customer Service,Developer,Blockchain,VR/AR,3,5,217.02
+93,Anthony,Good,4/22/17,-30.17617,-56.48686,University,Turpis Corp.,Advertising,Product Manager,Media,VR/AR,3,8,7118.38
+94,Velma,Kelly,1/18/18,-50.38494,-80.98598,University,Dui Cras Limited,Research and Development,Other,Healthcare,IOT,3,7,5883.59
+96,Jason,Mcfarland,6/18/17,-76.74283,15.24698,Others,Nonummy Ltd,Accounting,Product Manager,Automotive,Machine Learning,3,9,3821.83

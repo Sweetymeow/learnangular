@@ -1,0 +1,416 @@
+{
+  "name": "d3",
+  "children": [
+    {
+      "name": "version"
+    },
+    {
+      "name": "ascending"
+    },
+    {
+      "name": "descending"
+    },
+    {
+      "name": "min"
+    },
+    {
+      "name": "max"
+    },
+    {
+      "name": "extent"
+    },
+    {
+      "name": "sum"
+    },
+    {
+      "name": "mean"
+    },
+    {
+      "name": "quantile"
+    },
+    {
+      "name": "median"
+    },
+    {
+      "name": "variance"
+    },
+    {
+      "name": "deviation"
+    },
+    {
+      "name": "bisectLeft"
+    },
+    {
+      "name": "bisectRight"
+    },
+    {
+      "name": "bisect"
+    },
+    {
+      "name": "bisector"
+    },
+    {
+      "name": "shuffle"
+    },
+    {
+      "name": "permute"
+    },
+    {
+      "name": "pairs"
+    },
+    {
+      "name": "zip"
+    },
+    {
+      "name": "transpose"
+    },
+    {
+      "name": "keys"
+    },
+    {
+      "name": "values"
+    },
+    {
+      "name": "entries"
+    },
+    {
+      "name": "merge"
+    },
+    {
+      "name": "range"
+    },
+    {
+      "name": "map"
+    },
+    {
+      "name": "nest"
+    },
+    {
+      "name": "set"
+    },
+    {
+      "name": "behavior",
+      "children": [
+        {
+          "name": "drag"
+        },
+        {
+          "name": "zoom"
+        }
+      ]
+    },
+    {
+      "name": "rebind"
+    },
+    {
+      "name": "dispatch"
+    },
+    {
+      "name": "event"
+    },
+    {
+      "name": "requote"
+    },
+    {
+      "name": "selection",
+      "children": [
+        {
+          "name": "enter"
+        }
+      ]
+    },
+    {
+      "name": "ns",
+      "children": [
+        {
+          "name": "prefix",
+          "children": [
+            {
+              "name": "svg"
+            },
+            {
+              "name": "xhtml"
+            },
+            {
+              "name": "xlink"
+            },
+            {
+              "name": "xml"
+            },
+            {
+              "name": "xmlns"
+            }
+          ]
+        },
+        {
+          "name": "qualify"
+        }
+      ]
+    },
+    {
+      "name": "csv",
+      "children": [
+        {
+          "name": "parse"
+        },
+        {
+          "name": "parseRows"
+        },
+        {
+          "name": "format"
+        },
+        {
+          "name": "formatRows"
+        }
+      ]
+    },
+    {
+      "name": "tsv",
+      "children": [
+        {
+          "name": "parse"
+        },
+        {
+          "name": "parseRows"
+        },
+        {
+          "name": "format"
+        },
+        {
+          "name": "formatRows"
+        }
+      ]
+    },
+    {
+      "name": "timer",
+      "children": [
+        {
+          "name": "flush"
+        }
+      ]
+    },
+    {
+      "name": "round"
+    },
+    {
+      "name": "formatPrefix"
+    },
+    {
+      "name": "locale"
+    },
+    {
+      "name": "format"
+    },
+    {
+      "name": "geom",
+      "children": [
+        {
+          "name": "hull"
+        },
+        {
+          "name": "polygon"
+        },
+        {
+          "name": "voronoi"
+        },
+        {
+          "name": "delaunay"
+        },
+        {
+          "name": "quadtree"
+        }
+      ]
+    },
+    {
+      "name": "interpolateRgb"
+    },
+    {
+      "name": "interpolateObject"
+    },
+    {
+      "name": "interpolateNumber"
+    },
+    {
+      "name": "interpolateString"
+    },
+    {
+      "name": "interpolate"
+    },
+    {
+      "name": "interpolators"
+    },
+    {
+      "name": "interpolateArray"
+    },
+    {
+      "name": "ease"
+    },
+    {
+      "name": "interpolateHcl"
+    },
+    {
+      "name": "interpolateHsl"
+    },
+    {
+      "name": "interpolateLab"
+    },
+    {
+      "name": "interpolateRound"
+    },
+    {
+      "name": "transform"
+    },
+    {
+      "name": "interpolateTransform"
+    },
+    {
+      "name": "layout",
+      "children": [
+        {
+          "name": "bundle"
+        },
+        {
+          "name": "chord"
+        },
+        {
+          "name": "force"
+        },
+        {
+          "name": "hierarchy"
+        },
+        {
+          "name": "partition"
+        },
+        {
+          "name": "pie"
+        },
+        {
+          "name": "stack"
+        },
+        {
+          "name": "histogram"
+        },
+        {
+          "name": "pack"
+        },
+        {
+          "name": "tree"
+        },
+        {
+          "name": "cluster"
+        },
+        {
+          "name": "treemap"
+        }
+      ]
+    },
+    {
+      "name": "random",
+      "children": [
+        {
+          "name": "normal"
+        },
+        {
+          "name": "logNormal"
+        },
+        {
+          "name": "bates"
+        },
+        {
+          "name": "irwinHall"
+        }
+      ]
+    },
+    {
+      "name": "scale",
+      "children": [
+        {
+          "name": "linear"
+        },
+        {
+          "name": "log"
+        },
+        {
+          "name": "pow"
+        },
+        {
+          "name": "sqrt"
+        },
+        {
+          "name": "ordinal"
+        },
+        {
+          "name": "category10"
+        },
+        {
+          "name": "category20"
+        },
+        {
+          "name": "category20b"
+        },
+        {
+          "name": "category20c"
+        },
+        {
+          "name": "quantile"
+        },
+        {
+          "name": "quantize"
+        },
+        {
+          "name": "threshold"
+        },
+        {
+          "name": "identity"
+        }
+      ]
+    },
+    {
+      "name": "svg",
+      "children": [
+        {
+          "name": "arc"
+        },
+        {
+          "name": "line",
+          "children": [
+            {
+              "name": "radial"
+            }
+          ]
+        },
+        {
+          "name": "area",
+          "children": [
+            {
+              "name": "radial"
+            }
+          ]
+        },
+        {
+          "name": "chord"
+        },
+        {
+          "name": "diagonal",
+          "children": [
+            {
+              "name": "radial"
+            }
+          ]
+        },
+        {
+          "name": "symbol"
+        },
+        {
+          "name": "symbolTypes"
+        },
+        {
+          "name": "axis"
+        },
+        {
+          "name": "brush"
+        }
+      ]
+    }
+  ]
+}

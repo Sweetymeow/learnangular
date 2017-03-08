@@ -1,0 +1,689 @@
+{
+  "name": "d3",
+  "children": [
+    {"name": "version"},
+    {"name": "ascending"},
+    {"name": "descending"},
+    {"name": "min"},
+    {"name": "max"},
+    {"name": "extent"},
+    {"name": "sum"},
+    {"name": "mean"},
+    {"name": "quantile"},
+    {"name": "median"},
+    {"name": "variance"},
+    {"name": "deviation"},
+    {"name": "bisectLeft"},
+    {"name": "bisectRight"},
+    {"name": "bisect"},
+    {"name": "bisector"},
+    {"name": "shuffle"},
+    {"name": "permute"},
+    {"name": "pairs"},
+    {"name": "zip"},
+    {"name": "transpose"},
+    {"name": "keys"},
+    {"name": "values"},
+    {"name": "entries"},
+    {"name": "merge"},
+    {"name": "range"},
+    {"name": "map"},
+    {"name": "nest"},
+    {"name": "set"},
+    {
+      "name": "behavior",
+      "children": [
+        {"name": "drag"},
+        {"name": "zoom"}
+      ]
+    },
+    {"name": "rebind"},
+    {"name": "dispatch"},
+    {"name": "event"},
+    {"name": "requote"},
+    {
+      "name": "selection",
+      "children": [{"name": "enter"}]
+    },
+    {
+      "name": "ns",
+      "children": [
+        {
+          "name": "prefix",
+          "children": [
+            {"name": "svg"},
+            {"name": "xhtml"},
+            {"name": "xlink"},
+            {"name": "xml"},
+            {"name": "xmlns"}
+          ]
+        },
+        {"name": "qualify"}
+      ]
+    },
+    {"name": "select"},
+    {"name": "selectAll"},
+    {"name": "mouse"},
+    {"name": "touch"},
+    {"name": "touches"},
+    {"name": "interpolateZoom"},
+    {"name": "color"},
+    {"name": "hsl"},
+    {"name": "hcl"},
+    {"name": "lab"},
+    {"name": "rgb"},
+    {"name": "functor"},
+    {"name": "xhr"},
+    {"name": "dsv"},
+    {
+      "name": "csv",
+      "children": [
+        {"name": "parse"},
+        {"name": "parseRows"},
+        {"name": "format"},
+        {"name": "formatRows"}
+      ]
+    },
+    {
+      "name": "tsv",
+      "children": [
+        {"name": "parse"},
+        {"name": "parseRows"},
+        {"name": "format"},
+        {"name": "formatRows"}
+      ]
+    },
+    {
+      "name": "timer",
+      "children": [{"name": "flush"}]
+    },
+    {"name": "round"},
+    {"name": "formatPrefix"},
+    {
+      "name": "time",
+      "children": [
+        {
+          "name": "year",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "years",
+          "children": [{"name": "utc"}]
+        },
+        {
+          "name": "day",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "days",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "dayOfYear"},
+        {
+          "name": "sunday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sundays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "sundayOfYear"},
+        {
+          "name": "monday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mondays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "mondayOfYear"},
+        {
+          "name": "tuesday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tuesdays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "tuesdayOfYear"},
+        {
+          "name": "wednesday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "wednesdays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "wednesdayOfYear"},
+        {
+          "name": "thursday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "thursdays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "thursdayOfYear"},
+        {
+          "name": "friday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fridays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "fridayOfYear"},
+        {
+          "name": "saturday",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "saturdays",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "saturdayOfYear"},
+        {
+          "name": "week",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "weeks",
+          "children": [{"name": "utc"}]
+        },
+        {"name": "weekOfYear"},
+        {
+          "name": "format",
+          "children": [
+            {
+              "name": "utc",
+              "children": [{"name": "multi"}]
+            },
+            {"name": "multi"},
+            {
+              "name": "iso",
+              "children": [
+                {"name": "parse"},
+                {"name": "toString"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "second",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "seconds",
+          "children": [{"name": "utc"}]
+        },
+        {
+          "name": "minute",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "minutes",
+          "children": [{"name": "utc"}]
+        },
+        {
+          "name": "hour",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hours",
+          "children": [{"name": "utc"}]
+        },
+        {
+          "name": "month",
+          "children": [
+            {"name": "round"},
+            {"name": "ceil"},
+            {"name": "offset"},
+            {
+              "name": "range",
+              "children": [{"name": "utc"}]
+            },
+            {
+              "name": "utc",
+              "children": [
+                {"name": "round"},
+                {"name": "ceil"},
+                {"name": "offset"},
+                {"name": "range"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "months",
+          "children": [{"name": "utc"}]
+        },
+        {
+          "name": "scale",
+          "children": [{"name": "utc"}]
+        }
+      ]
+    },
+    {"name": "locale"},
+    {"name": "format"},
+    {
+      "name": "geo",
+      "children": [
+        {"name": "stream"},
+        {"name": "area"},
+        {"name": "bounds"},
+        {"name": "centroid"},
+        {"name": "clipExtent"},
+        {
+          "name": "conicEqualArea",
+          "children": [{"name": "raw"}]
+        },
+        {"name": "albers"},
+        {"name": "albersUsa"},
+        {"name": "path"},
+        {"name": "transform"},
+        {"name": "projection"},
+        {"name": "projectionMutator"},
+        {
+          "name": "equirectangular",
+          "children": [{"name": "raw"}]
+        },
+        {"name": "rotation"},
+        {"name": "circle"},
+        {"name": "distance"},
+        {"name": "graticule"},
+        {"name": "greatArc"},
+        {"name": "interpolate"},
+        {"name": "length"},
+        {
+          "name": "azimuthalEqualArea",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "azimuthalEquidistant",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "conicConformal",
+          "children": [{"name": "raw"}]
+        },
+        {
+          "name": "conicEquidistant",
+          "children": [{"name": "raw"}]
+        },
+        {
+          "name": "gnomonic",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "mercator",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "orthographic",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "stereographic",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        },
+        {
+          "name": "transverseMercator",
+          "children": [
+            {
+              "name": "raw",
+              "children": [{"name": "invert"}]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "geom",
+      "children": [
+        {"name": "hull"},
+        {"name": "polygon"},
+        {"name": "voronoi"},
+        {"name": "delaunay"},
+        {"name": "quadtree"}
+      ]
+    },
+    {"name": "interpolateRgb"},
+    {"name": "interpolateObject"},
+    {"name": "interpolateNumber"},
+    {"name": "interpolateString"},
+    {"name": "interpolate"},
+    {"name": "interpolators"},
+    {"name": "interpolateArray"},
+    {"name": "ease"},
+    {"name": "interpolateHcl"},
+    {"name": "interpolateHsl"},
+    {"name": "interpolateLab"},
+    {"name": "interpolateRound"},
+    {"name": "transform"},
+    {"name": "interpolateTransform"},
+    {
+      "name": "layout",
+      "children": [
+        {"name": "bundle"},
+        {"name": "chord"},
+        {"name": "force"},
+        {"name": "hierarchy"},
+        {"name": "partition"},
+        {"name": "pie"},
+        {"name": "stack"},
+        {"name": "histogram"},
+        {"name": "pack"},
+        {"name": "tree"},
+        {"name": "cluster"},
+        {"name": "treemap"}
+      ]
+    },
+    {
+      "name": "random",
+      "children": [
+        {"name": "normal"},
+        {"name": "logNormal"},
+        {"name": "bates"},
+        {"name": "irwinHall"}
+      ]
+    },
+    {
+      "name": "scale",
+      "children": [
+        {"name": "linear"},
+        {"name": "log"},
+        {"name": "pow"},
+        {"name": "sqrt"},
+        {"name": "ordinal"},
+        {"name": "category10"},
+        {"name": "category20"},
+        {"name": "category20b"},
+        {"name": "category20c"},
+        {"name": "quantile"},
+        {"name": "quantize"},
+        {"name": "threshold"},
+        {"name": "identity"}
+      ]
+    },
+    {
+      "name": "svg",
+      "children": [
+        {"name": "arc"},
+        {
+          "name": "line",
+          "children": [{"name": "radial"}]
+        },
+        {
+          "name": "area",
+          "children": [{"name": "radial"}]
+        },
+        {"name": "chord"},
+        {
+          "name": "diagonal",
+          "children": [{"name": "radial"}]
+        },
+        {"name": "symbol"},
+        {"name": "symbolTypes"},
+        {"name": "axis"},
+        {"name": "brush"}
+      ]
+    },
+    {"name": "transition"},
+    {"name": "text"},
+    {"name": "json"},
+    {"name": "html"},
+    {"name": "xml"},
+    {"name": "hexbin"}
+  ]
+}
