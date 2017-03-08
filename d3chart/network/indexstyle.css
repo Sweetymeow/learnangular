@@ -1,0 +1,6 @@
+.demo-card-wide > .mdl-card__title_1 
+{
+      color: #fff;
+      height: 176px;
+      background: url('/static/webapp/Pictures/ActiOn_1') center / cover;
+}
