@@ -81,87 +81,18 @@
     <nav id='filter-group' class='filter-group'></nav>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic3dlZXR5bWVvdyIsImEiOiJjaXoxdHM4aWowNHI2MnFxZjZtbmw4cDJ4In0.1140mL1gVeMEdPvgmOOG0g';
-        //        var places = {
-        //            "type": "FeatureCollection"
-        //            , "features": [{
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "theatre"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.038659, 38.931567]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "theatre"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.003168, 38.894651]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "bar"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.090372, 38.881189]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "bicycle"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.052477, 38.943951]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "music"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.031706, 38.914581]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "music"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.020945, 38.878241]
-        //                }
-        //    }, {
-        //                "type": "Feature"
-        //                , "properties": {
-        //                    "icon": "music"
-        //                }
-        //                , "geometry": {
-        //                    "type": "Point"
-        //                    , "coordinates": [-77.007481, 38.876516]
-        //                }
-        //    }]
-        //        };
+       
         var filterGroup = document.getElementById('filter-group');
         var layerList = [];
         var map = new mapboxgl.Map({
             container: 'map'
-            , style: 'mapbox://styles/mapbox/light-v9'
+            , style: 'mapbox://styles/mapbox/dark-v9'
             , center: [-77.04, 38.907]
-            , zoom: 11.15
+            , zoom: 4
         });
+        
         map.on('load', function () {
             // Add a GeoJSON source containing place coordinates and information.
-            //            map.addSource("places", {
-            //                "type": "geojson",
-            //                "data": places
-            //            });
             map.addSource("places", {
                 "type": "geojson"
                 , "data": "data/popupInfo.geojson"
@@ -223,6 +154,7 @@
             map.on('click', function (e) {
                 var curLayerID = e.target.painter.id;
                 var features = [];
+                
                 for (var i in layerList) {
                     var curFeature = map.queryRenderedFeatures(e.point, {
                         layers: [layerList[i]]
@@ -231,6 +163,7 @@
                         features = curFeature;
                     }
                 }
+                
                 if (!features.length) {
                     return;
                 }
@@ -241,9 +174,59 @@
                     .setLngLat(feature.geometry.coordinates)
                     .setHTML(feature.properties.description).addTo(map);
                 
+                map.addLayer({
+                    "id": "industries"
+                    , "type": "circle"
+                    , "source": "places"
+                    , "paint": {
+                        "circle-radius": 4
+                        , "circle-color": {industires}
+                        , "icon-allow-overlap": true
+                    }
+                    , "paint": {
+                        "icon-color": "#ff4081"
+                    }
+                    , "filter": ["==", "icon", symbol]
+                });
+                
                 console.log(features);
             });
-        });
+            
+            
+            var layers = [
+                [4, '#f28cb1'],
+                [2, '#f1f075'],
+                [0, '#51bbd6']
+            ];
+
+            layers.forEach(function (layer, i) {
+                map.addLayer({
+                    "id": "cluster-" + i,
+                    "type": "circle",
+                    "source": "places",
+                    "paint": {
+                        "circle-color": layer[1],
+                        "circle-radius": 18
+                    },
+                    "filter": i === 0 ?
+                        [">=", "point_count", layer[0]] :
+                        ["all",
+                            [">=", "point_count", layer[0]],
+                            ["<", "point_count", layers[i - 1][0]]]
+                });
+            });
+
+            // Add a layer for the clusters' count labels
+            map.addLayer({
+                "id": "cluster-count",
+                "type": "symbol",
+                "source": "places",
+                "layout": {
+                    "text-field": "{industries}",
+                    "text-size": 12
+                }
+            });
+        }); // map.on(load)
     </script>
 </body>
 
