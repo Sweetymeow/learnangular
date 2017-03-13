@@ -15,7 +15,7 @@ map.on('load', function () {
         type: "geojson",
         // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
         // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-        data: "data/ReturnNetworkData_F2_6.geojson",
+        data: "data/ReturnNetworkData_F2_6Icon.geojson",
         //     data: "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
         cluster: true,
         clusterMaxZoom: 14, // Max zoom to cluster points on
@@ -86,8 +86,7 @@ map.on('load', function () {
         } else {
             var feature = pointFeatures[0];
             console.log(feature.geometry.coordinates);
-            // Populate the popup and set its coordinates
-            // based on the feature found.
+            // Populate the popup and set its coordinates based on the feature found.
             var popup = new mapboxgl.Popup()
                 .setLngLat(feature.geometry.coordinates)
                 .setHTML('<p><b>' + feature.properties["Loc_Country"] + ': ' +

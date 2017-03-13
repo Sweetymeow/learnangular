@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript">
+        var geojsonData = [];
+        //        var colors = d3.scale.category20();
+        var newCountries = ["United States", "United States", "United States", "United States", "United States", "United States", "Canada", "Columbia", "Chile"];
+        var newCoordinates = [[29.836411, -90.040813], [40.205153, -105.098807], [37.772703, -122.468245], [40.605126, -80.102459]];
+        var geocodeKey = {
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?address=',
+            address: '',
+            nobias: 'location=0,0&radius=20000000',
+            key: 'key=AIzaSyCwVqYAGPVxQCVVwI7ryC_pMx4r6QiW5rY',
+            type: 'types=geocode',
+        };
+        var imageNames;
+        var imageNameObj = {};
+
+        d3.csv("../data/IndustryClubList.csv", function (data) {
+            imageNames = data;
+            for(var i in imageNames){
+                if(imageNames[i].clubName){
+                    imageNameObj[imageNames[i].clubName] = imageNames[i];
+                }
+            }
+            
+            console.log(imageNameObj);
+        });
+
+        var geoJson = function (){
+            
+            this.originalData = {};
+            this.features = {};
+            this.dataLength = 0;
+            
+            this.getFeatures = function(){
+                this.features = this.originalData.features;
+                return this.features;
+            };
+            this.updateValues =  function () {
+
+            };
+            this.addNewKeys = function () {
+
+            }; // Pick ramdom item from Array, Add new value of key and push to Array
+            this.addRandomData = function (key, newValues, items) {
+                var newJson = [];
+                this.dataLength = this.features.length;
+                var lastItemID = this.features[this.dataLength - 1]["Record ID"];
+                console.log("ID of last itme is: " + lastItemID);
+
+                for (var i = 0; i < items; i++) {
+                    var randomNum = Math.ceil(Math.random() * (json.length - 1));
+                    var jsonItem = json[randomNum];
+                    jsonItem["Record ID"] = lastItemID + 1 + i;
+                    jsonItem[key] = newValues[Math.ceil(Math.random() * (newValues.length - 1))];
+                    newJson.push(jsonItem);
+                }
+                return this.features.concat(newJson);
+            };
+            
+            this.giveRandomData = function (key, theKey, newValues) {
+                var newValue = [];
+                var temp = 0;
+
+                for (var i = 0; i < this.features.length; i++) {
+                    var newValue = [];
+                    if (this.features[i].properties[key] === theKey) {
+                        newValue = newValues[getRandomIntInclusive(0, 3)];
+                        this.features[i].geometry.coordinates[0] = parseFloat(newValue[1]);
+                        this.features[i].geometry.coordinates[1] = parseFloat(newValue[0]);
+                    } else {
+                        temp = this.features[i].geometry.coordinates[0];
+                        this.features[i].geometry.coordinates[0] = parseFloat(this.features[i].geometry.coordinates[1]);
+                        this.features[i].geometry.coordinates[1] = parseFloat(temp);
+                    }
+                    console.log("switch");
+                }
+                console.log("add All random down: ");
+                return this.features;
+            };
+            
+            this.splitcoord = function(){
+                var features = this.features; 
+                for(var i in this.features){
+                    this.features[i].geometry.coordinates = (function () {
+                                var coor = properties[i]["Loc_Lat_Lon"].split(", ");
+                                return [coor[0], coor[1]];
+                            })();
+                }
+            };
+            
+            this.addImageName = function(defaultName){
+                var features = this.features; 
+                
+                for(var i in this.features){
+                    var properties = this.features[i].properties;
+                    var imageName = imageNameObj[properties["Industry"]];
+                    properties["icon"] = imageName ? imageName.imgName : defaultName;
+                    
+                    console.log(properties["icon"]);
+                }
+                console.log(this.features);
+            };
+            
+            this.buildGeoJson = function (properties) {
+                var geojson = {};
+
+                this.geojsonData = {
+                    type: "FeatureCollection",
+                    features: this.features
+                };
+                return this.geojsonData;
+            };
+            this.geojsonData = {};
+        }
+
+        var normalJSON = {
+            jsondata: []
+        }
+
+        var geojson = new geoJson();
+
+        $.getJSON("../data/ReturnNetworkData_F2_3.geojson", function (json) {
+            console.log("Original Data: ");
+            geojson.originalData = json;
+            var data = geojson.getFeatures();
+            console.log(data);
+
+            var GeoJsonItem = {};
+            //            var newJson = addRandomData(json, "Loc_Country", newCountries, 50);
+            var USdata = data.filter(function (d) {
+                return d.properties["Loc_Country"] == "United States";
+            })
+            
+            var newJson = geojson.giveRandomData(data, "Loc_Country", "United States", newCoordinates);
+            geojson.addImageName("Settings");
+
+            setTimeout(function () {
+                var updatedGeojson = geojson.buildGeoJson(geojson.features);
+                console.log(updatedGeojson); 
+                saveJson(updatedGeojson);
+            }, 1000);
+            //            var cityList = calculProperties(json, "Loc_City")
+            //            console.log(Object.keys(cityList)); // this will show the info it in firebug console          
+        });
+
+
+
+        function find(featureItem, index) {
+            var xhr = new XMLHttpRequest();
+            //var randomAddress = geojsonData[Math.ceil(Math.random() * 118)].Country;
+            var address = featureItem.properties["Loc_Country"].split(" ");
+            geocodeKey.address = address.join("+");
+
+            //xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=Mountain+View,+CA&key=AIzaSyC-Lgj5QeFDBcaTcSeczKlhObV54M6Fb2w", false);
+            //xhr.open("GET", geocodeKey.url + geocodeKey.address + "&" + geocodeKey.nobias + "&" + geocodeKey.key , false);
+            var geoURL = geocodeKey.url + geocodeKey.address + "&" + geocodeKey.nobias + "&" + geocodeKey.type + "&" + geocodeKey.key;
+
+            if (geoURL && geocodeKey.address) {
+                var currentLoc;
+                xhr.open("GET", geoURL, true);
+                xhr.send();
+                console.log(xhr);
+
+                currentLoc = printResult(xhr);
+
+                if (currentLoc !== "XHR Error") {
+                    featureItem.geometry.coordinates[0] = Number(currentLoc.lat);
+                    featureItem.geometry.coordinates[1] = Number(currentLoc.lng);
+                    console.log(geocodeKey.address + "at LAT: " + currentLoc.lat + "," + currentLoc.lng);
+                } else {
+                    console.error("error address");
+                }
+            }
+        }
+
+        function printResult(xhr) {
+            if (xhr.status === 200) {
+                var responseText = xhr.responseText;
+                var responseObj = JSON.parse(responseText);
+
+                return responseObj.status == "OK" ?
+                    responseObj.results[0].geometry.location : "Result: " + responseObj.status;
+            } else {
+                return "XHR Error";
+            }
+        }
+
+        function saveJson(JsonExport) {
+            console.log(JsonExport);
+            //Get the file contents
+            var str = JSON.stringify(JsonExport);
+
+            //Save the file contents as a DataURI
+            var dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(str);
+
+            //Write it as the href for the link
+            var link = document.getElementById('link').href = dataUri;
+        }
+
+        // Pick ramdom item from Array, Add new value of key and push to Array
+        function addNewProperties(json, newProperties) {
+            for (var i in newProperties) {
+
+            }
+        }
+
+        // Pick ramdom item from Array, Add new value of key and push to Array
+
+        function calculProperties(json, key) {
+            var propertyList = {};
+
+            if (json) {
+                json.map(function (item) {
+                    if (!propertyList.hasOwnProperty(item["Loc_City"])) {
+                        propertyList[item[key]] = 1;
+                    } else {
+                        propertyList[item[key]] += 1;
+                    }
+                });
+            }
+            return propertyList;
+        }
+
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div>
+            # Search for AJAX Call #
+            <label for="carMake">Address:</label>
+            <input type="text" id="carMake" size="5" />
+            <br />
+            <input type="button" value="FIND" onclick="find();" />
+            <div id="grid">
+            </div>
+            <div>
+                <a href="#" id="link" download="example.json">Download as JSON</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
