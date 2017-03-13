@@ -16,10 +16,12 @@
             key: 'key=AIzaSyC-Lgj5QeFDBcaTcSeczKlhObV54M6Fb2w',
             type: 'types=geocode',
         };
+        
+        var data = {};
 
         $.getJSON("../data/ReturnNetworkData_F2.json", function (json) {
             var CountryList = {};
-            var GeoJsonItem = {};
+            data = json;
 
             if (json) {
                 json.map(function (item) {
@@ -31,10 +33,14 @@
                     return CountryList;
                 });
             }
-            //            geojsonData = Object.keys(CountryList);
-            geojsonData = buildGeoJson(json);
-            console.log(Object.keys(CountryList)); // this will show the info it in firebug console
+            // console.log(Object.keys(CountryList)); // this will show the info it in firebug console
             console.log(CountryList);
+            //            geojsonData = Object.keys(CountryList);
+            
+        });
+        
+        function generate(){
+            geojsonData = buildGeoJson(data);
             console.log(geojsonData);
 
             for (var i = 0; i < geojsonData.features.length; i++) {
@@ -43,7 +49,7 @@
             console.log("all down");
             //            console.log(geojsonData);
             saveJson(geojsonData);
-        });
+        }
 
         function buildGeoJson(properties) {
             var geojson = {};
@@ -73,7 +79,7 @@
             var xhr = new XMLHttpRequest();
             //var randomAddress = geojsonData[Math.ceil(Math.random() * 118)].Country;
 
-            geocodeKey.address = featureItem.properties["Loc_Country"];
+            geocodeKey.address = featureItem.properties["Loc_City"];
 
             //xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=Mountain+View,+CA&key=AIzaSyC-Lgj5QeFDBcaTcSeczKlhObV54M6Fb2w", false);
             //xhr.open("GET", geocodeKey.url + geocodeKey.address + "&" + geocodeKey.nobias + "&" + geocodeKey.key , false);
@@ -144,7 +150,9 @@
             <label for="carMake">Address:</label>
             <input type="text" id="carMake" size="5" />
             <br />
-            <input type="button" value="Search" onclick="find();" />
+            <input type="button" value="Generate" onclick="generate();" />
+            <br>
+            <input type="button" value="FIND" onclick="find();" />
             <div id="grid">
             </div>
             <div>

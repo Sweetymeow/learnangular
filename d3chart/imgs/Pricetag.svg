@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="115px" height="80px" viewBox="0 0 115 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Pricetag_C</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0375 80 115 80 115 0 0.0375 0"></polygon>
+    </defs>
+    <g id="D_Network_BK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Industry-Club" transform="translate(-58.000000, -477.000000)">
+            <g id="Pricetag_C" transform="translate(58.000000, 477.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M105,40 C105,42.756875 102.756875,45 100,45 C97.243125,45 95,42.756875 95,40 C95,37.243125 97.243125,35 100,35 C102.756875,35 105,37.243125 105,40 Z M107.5,40 C107.5,35.864375 104.135625,32.5 100,32.5 C95.864375,32.5 92.5,35.864375 92.5,40 C92.5,44.135625 95.864375,47.5 100,47.5 C104.135625,47.5 107.5,44.135625 107.5,40 Z M89.85375,80 L0,80 L0,0 L2.5,0 L2.5,77.5 L88.89625,77.5 L112.5,56.316875 L112.5,23.683125 L88.89625,2.5 L72.585,2.5 L72.585,0 L89.85375,0 L115,22.566875 L115,57.433125 L89.85375,80 L89.85375,80 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+                <polygon id="Fill-4" fill="#FFFFFF" points="2.5 77.5 82.5 77.5 82.5 0 2.5 0"></polygon>
+                <polygon id="Fill-5" fill="#FFFFFF" points="2.5 77.5 62.5 77.5 62.5 0 2.5 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

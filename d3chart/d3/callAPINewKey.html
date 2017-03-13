@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript">
+        var geojsonData = [];
+        //        var colors = d3.scale.category20();
+        var newCountries = ["United States", "United States", "United States", "United States", "United States", "United States", "Canada", "Columbia", "Chile"];
+        var newCities = [
+            "Boston"
+            , "Chicago"
+            , "New York City"
+            , "Los Angeles"
+            , "Houston"
+            , "Philadelphia"
+            , "Phoenix"
+            , "San Antonio"
+            , "San Diego"
+            , "Dallas"
+            , "San Jose"
+            , "Austin"
+            , "Jacksonville"
+            , "San Francisco"
+            , "Columbus"
+            , "Charlotte"
+            , "Detroit"
+            , "Paris"
+            , "Bora Bora"
+            , "Bora Bora"
+            , "Tokyo"
+            , "Berlin"
+        ];
+        var geocodeKey = {
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?address='
+            , address: ''
+            , nobias: 'location=0,0&radius=20000000'
+//            , key: 'key=AIzaSyCwVqYAGPVxQCVVwI7ryC_pMx4r6QiW5rY'
+            , key: 'key=AIzaSyC-Lgj5QeFDBcaTcSeczKlhObV54M6Fb2w',
+            type: 'types=geocode'
+        , };
+        
+        $.getJSON("../data/ReturnNetworkData_F2.json", function (json) {
+            console.log("Original Data: ");
+            console.log(json);
+            var GeoJsonItem = {};
+            var newJson = addRandomData(json, "Loc_City", newCities, 50);
+            var index = 0;
+            var stopInterval = 10; // newJson.length
+            
+            console.log(newJson.length);
+            geojsonData = buildGeoJson(newJson);
+            console.log(geojsonData);
+
+            var xhrCall = setInterval(function () {
+                
+                
+            if(index < stopInterval){
+                find(geojsonData, index++);
+            }else{
+                clearInterval(xhrCall);
+                console.log("Stop");
+            }
+            }, 1000);
+            
+            saveJson(geojsonData);
+            console.log(geojsonData);
+            //            var cityList = calculProperties(json, "Loc_City")
+            //            console.log(Object.keys(cityList)); // this will show the info it in firebug console          
+        });
+
+        function buildGeoJson(properties) {
+            var geojson = {};
+            var geojsonFeatures = [];
+            geojson["type"] = "FeatureCollection";
+            
+            for (var i in properties) {
+                geojsonFeatures.push({
+                    "type": "Feature"
+                    , "properties": properties[i]
+                    , "geometry": {
+                        "type": "Point"
+                        , "coordinates": (function () {
+                            var coor = properties[i]["Loc_Lat_Lon"].split(", ");
+                            return [coor[0], coor[1]];
+                        })()
+                    }
+                });
+            }
+            
+            geojson["features"] = geojsonFeatures;
+            
+            return geojson;
+        }
+
+        function find(geojsonData, index) {
+            var xhr = new XMLHttpRequest();
+            var featureItem = geojsonData.features[index];
+            
+            xhr.onreadystatechange = function () {
+                console.log(this.status);
+                if (this.readyState == 4 && this.status == 200) {
+                    var currentLoc = printResult(this);
+                    if (currentLoc !== "XHR Error") {
+                        featureItem.geometry.coordinates[0] = Number(currentLoc.lat);
+                        featureItem.geometry.coordinates[1] = Number(currentLoc.lng);
+                        console.log("Current Loc: " + currentLoc.lat + "," + currentLoc.lng);
+                    }
+                }else {
+                    console.error("error XHR");
+                    console.log(this);
+                    
+                }
+            };
+            var address = featureItem.properties["Loc_City"].split(" ");
+            
+            geocodeKey.address = address.join("+");
+            
+            var geoURL = geocodeKey.url + geocodeKey.address + "&" + geocodeKey.nobias + "&" + geocodeKey.type + "&" + geocodeKey.key;
+            xhr.open("GET", geoURL, true);
+            xhr.send();
+            //if (geoURL && geocodeKey.address) {}
+            
+            // Action to be performed when the document is read;
+        }
+
+        function printResult(xhr) {
+            var responseText = xhr.responseText;
+            var responseObj = JSON.parse(responseText);
+            console.log(responseObj);
+            return responseObj.status == "OK" ? 
+                responseObj.results[0].geometry.location : "Result: " + responseObj.status;
+        }
+
+        function saveJson(JsonExport) {
+            //Get the file contents
+            var str = JSON.stringify(JsonExport);
+            //Save the file contents as a DataURI
+            var dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(str);
+            //Write it as the href for the link
+            var link = document.getElementById('link').href = dataUri;
+        }
+        
+        // Pick ramdom item from Array, Add new value of key and push to Array
+        function addNewProperties(json, newProperties) {
+            for (var i in newProperties) {}
+        }
+        
+        // Pick ramdom item from Array, Add new value of key and push to Array
+        function addRandomData(json, key, newValues, items) {
+            var newJson = [];
+            var lastItemID = json[json.length - 1]["Record ID"];
+            console.log(json[json.length - 1]);
+            for (var i = 0; i < items; i++) {
+                var randomNum = Math.ceil(Math.random() * (json.length - 1));
+                var jsonItem = json[randomNum];
+                jsonItem["Record ID"] = lastItemID + 1 + i;
+                jsonItem[key] = newValues[Math.ceil(Math.random() * (newValues.length - 1))];
+                newJson.push(jsonItem);
+            }
+            return json.concat(newJson);
+        }
+
+        function calculProperties(json, key) {
+            var propertyList = {};
+            if (json) {
+                json.map(function (item) {
+                    if (!propertyList.hasOwnProperty(item["Loc_City"])) {
+                        propertyList[item[key]] = 1;
+                    }
+                    else {
+                        propertyList[item[key]] += 1;
+                    }
+                });
+            }
+            return propertyList;
+        }
+        //        function editJson(JsonExport) {
+        //            var txtFile = "../data/test.txt";
+        //            var file = new File(txtFile, "write");
+        //            var str = JSON.stringify(JsonExport);
+        //
+        //            log("opening file...");
+        //            file.open();
+        //            log("writing file..");
+        //            file.writeline(str);
+        //            file.close();
+        //        }
+    </script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div> # Search for AJAX Call #
+            <label for="carMake">Address:</label>
+            <input type="text" id="carMake" size="5" />
+            <br />
+            <input type="button" value="Search" onclick="find();" />
+            <div id="grid"> </div>
+            <div> <a href="#" id="link" download="example.json">Download as JSON</a> </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="130px" viewBox="0 0 63 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>pill_C</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="D_Network_BK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Industry-Club" transform="translate(-327.000000, -39.000000)" fill="#FFFFFF">
+            <g id="pill_C" transform="translate(327.000000, 39.000000)">
+                <path d="M31.10315,130 C13.9529,130 0,116.00355 0,98.8 L0,65 L62.4,65 L62.40195,98.79935 C62.40195,116.00355 48.3613,130 31.10315,130" id="Fill-1"></path>
+                <polyline id="Fill-3" points="0.00195 97.5 62.40195 97.5 62.4013 81.25 0.00195 81.25 0.00195 97.5"></polyline>
+                <path d="M0.00195,98.8 C0.00195,104.2132 1.3832,109.3079 3.8116,113.75 L58.56695,113.75 C61.00965,109.3079 62.40195,104.2132 62.40195,98.79935 L62.40195,97.5 L0.00195,97.5 L0.00195,98.8" id="Fill-4"></path>
+                <path d="M58.56695,113.75 L3.8116,113.75 C9.09935,123.4246 19.3492,130 31.10315,130 C42.93055,130 53.24475,123.4246 58.56695,113.75" id="Fill-5"></path>
+                <path d="M62.40195,65 L59.80195,65 L59.80195,31.2 C59.80195,15.4297 47.0158,2.6 31.29945,2.6 C15.47455,2.6 2.6,15.4297 2.6,31.2 L2.60195,65 L0.00195,65 L0,31.20065 C0,13.99645 14.04065,0 31.29945,0 C48.4497,0 62.40195,13.99645 62.40195,31.2 L62.40195,65" id="Fill-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>
